@@ -26,7 +26,11 @@ var max=5;
 var min=1;
 var numPc= Math.floor(Math.random()*(max-min+1))+min;
 var numUser= parseInt(prompt("inserisci un numero tra "+min +" e "+ max));
+var userChoose= prompt("inserisci pari o dispari");
 
+while(userChoose !== "pari" || userChoose !== "dispari"){
+    var userChoose= prompt("inserisci pari o dispari");
+}
 while(numUser<1 || numUser>5){
     var numUser= parseInt(prompt("inserisci un numero tra "+min +" e "+ max));
 }
@@ -34,9 +38,9 @@ while(numUser<1 || numUser>5){
 
 var sumNumber = numPc+numUser;
 
-if(numUser % 2 ===0 && sumNumber%2===0){
+if(userChoose === "pari" && sumNumber%2===0){
     outputElement2.innerHTML= " hai vinto";
-}else if(numUser % 2 !==0 && sumNumber%2!==0){
+}else if(userChoose === "dispari" && sumNumber%2!==0){
     outputElement2.innerHTML= " hai vinto";
 }else{
     outputElement2.innerHTML= " hai perso";
