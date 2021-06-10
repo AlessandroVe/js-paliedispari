@@ -74,14 +74,7 @@ if(isPari(sumNumber)===true && userChoose === "pari"){
 }
 
 
-/* if(userChoose === "pari" && sumNumber%2===0){
-    outputElement2.innerHTML= " hai vinto";
-}else if(userChoose === "dispari" && sumNumber%2!==0){
-    outputElement2.innerHTML= " hai vinto";
-}else{
-    outputElement2.innerHTML= " hai perso";
-} */
- 
+
 
 
 var outputElement3 =document.getElementById("output3");
