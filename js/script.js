@@ -1,4 +1,23 @@
-//Chiedere all’utente di inserire una parola Creare una funzione per capire se la parola inserita è palindroma
+ /*//var outputElement3 =document.getElementById("output3");
+
+
+
+ var parolaUtente= prompt("inserisci una parola");
+ var parolaInversa = "";
+ for( i = parolaUtente.length -1 ; i >= 0; i--) {
+     parolaInversa += parolaUtente[i];
+    }
+if (parolaUtente === parolaInversa){
+    outputElement3.innerHTML="la parola e' palindroma";
+}else{
+    outputElement3.innerHTML="la parola  non e' palindroma";
+
+}
+*/
+
+
+
+ //Chiedere all’utente di inserire una parola Creare una funzione per capire se la parola inserita è palindroma
 var outputElement =document.getElementById("output");
 
 function invertiParola(str){
@@ -22,8 +41,9 @@ if(parola == parolaInversa){
 
 
 var outputElement2 =document.getElementById("output2");
-  
+ 
 /* chiediamo "pari o dispari "  all'utente*/
+
 var userChoose= prompt("inserisci pari o dispari").toLowerCase();
 
 while(userChoose !== "pari" && userChoose !== "dispari"){
@@ -31,7 +51,7 @@ while(userChoose !== "pari" && userChoose !== "dispari"){
 }  
 
 /* generiamo un numero random */
-
+ 
 var max=5;
 var min=1;
 var numPc= Math.floor(Math.random()*(max-min+1))+min;
@@ -75,10 +95,4 @@ if(isPari(sumNumber)===true && userChoose === "pari"){
 
 
 
-
-
-var outputElement3 =document.getElementById("output3");
-
-
-
-
+/*  */
