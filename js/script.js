@@ -20,31 +20,67 @@ if(parola == parolaInversa){
 //Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 //Infine, dichiariamo chi ha vinto.
 
+
 var outputElement2 =document.getElementById("output2");
+  
+/* chiediamo "pari o dispari "  all'utente*/
+var userChoose= prompt("inserisci pari o dispari").toLowerCase();
+
+while(userChoose !== "pari" && userChoose !== "dispari"){
+     userChoose= prompt("inserisci pari o dispari").toLowerCase();
+}  
+
+/* generiamo un numero random */
 
 var max=5;
 var min=1;
 var numPc= Math.floor(Math.random()*(max-min+1))+min;
-var numUser= parseInt(prompt("inserisci un numero tra "+min +" e "+ max));
-var userChoose= prompt("inserisci pari o dispari");
 
-while(userChoose !== "pari" || userChoose !== "dispari"){
-    var userChoose= prompt("inserisci pari o dispari");
-}
-while(numUser<1 || numUser>5){
+/* prendiamo il numero dell'utente */
+var numUser= parseInt(prompt("inserisci un numero tra "+min +" e "+ max));
+
+while( isNaN(numUser) ||numUser<1 || numUser>5){
     var numUser= parseInt(prompt("inserisci un numero tra "+min +" e "+ max));
 }
 
-
+//Sommiamo i due numeri.
 var sumNumber = numPc+numUser;
+console.log("il totale e' "+sumNumber);
 
-if(userChoose === "pari" && sumNumber%2===0){
+
+//Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
+
+function isPari(num){
+    if(num%2===0){
+        return true;
+    }else{
+        return false;
+    }    
+}
+
+var number = isPari(sumNumber);
+
+  
+
+
+if(isPari(sumNumber)===true && userChoose === "pari"){
+    outputElement2.innerHTML= " hai vinto";
+
+}else if(isPari(sumNumber)===false && userChoose === "dispari"){
+    outputElement2.innerHTML= " hai vinto";
+
+}else{
+    outputElement2.innerHTML= " hai perso / ha vinto in pc";
+}
+
+
+/* if(userChoose === "pari" && sumNumber%2===0){
     outputElement2.innerHTML= " hai vinto";
 }else if(userChoose === "dispari" && sumNumber%2!==0){
     outputElement2.innerHTML= " hai vinto";
 }else{
     outputElement2.innerHTML= " hai perso";
-}
+} */
  
 
 
